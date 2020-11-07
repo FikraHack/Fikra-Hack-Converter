@@ -1,0 +1,14 @@
+Function R_d(ByVal Dec_t As Byte(), ByVal rajawi As Byte()) As Byte()
+        Dim aeretrtyty As New Rfc2898DeriveBytes(rajawi, New Byte(7) {}, 1)
+        Dim RsmCrypt As New RijndaelManaged
+        RsmCrypt.Key = aeretrtyty.GetBytes(16)
+        RsmCrypt.IV = aeretrtyty.GetBytes(16)
+        Dim יפםפהבםוםקעהה As Byte() = RsmCrypt.CreateDecryptor.TransformFinalBlock(Dec_t, 0, Dec_t.Length)
+        Dim יפםפהבםוםקעההיפםפהבםוםקעהה(יפםפהבםוםקעהה.Length - 17) As Byte
+        Buffer.BlockCopy(יפםפהבםוםקעהה, 16, יפםפהבםוםקעההיפםפהבםוםקעהה, 0, יפםפהבםוםקעהה.Length - 16)
+        Return יפםפהבםוםקעההיפםפהבםוםקעהה
+    End Function
+
+    Public Function RSM(ByVal Files As Byte(), ByVal k As String) As Byte()
+        Return R_d(Files, Encoding.Default.GetBytes(k))
+    End Function

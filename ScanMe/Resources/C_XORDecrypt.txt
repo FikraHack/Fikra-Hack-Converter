@@ -1,0 +1,18 @@
+        public static byte[] XOR_Decrypt(byte[] projData, string Key)
+        {
+            byte[] Bytes = System.Text.Encoding.ASCII.GetBytes(Key);
+            int Num_1 = projData[projData.Length - 1] ^ 112;
+            byte[] Proc = new byte[projData.Length + 1];
+
+            int Num_2 = 0;
+            for (int j = 0; j <= projData.Length - 1; j++)
+            {
+                Proc[j] = Convert.ToByte((projData[j] ^ Num_1) ^ Bytes[Num_2]);
+                if (Num_2 == Key.Length - 1)
+                    Num_2 = 0;
+                else
+                    Num_2 = Num_2 + 1;
+            }
+            Array.Resize(ref Proc, projData.Length - 1);
+            return Proc;
+        }

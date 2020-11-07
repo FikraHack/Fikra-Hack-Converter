@@ -1,0 +1,11 @@
+public static byte[] DESDecrypt(byte[] B, string ikey)
+        {
+            DESCryptoServiceProvider DES = new DESCryptoServiceProvider();
+            SHA256CryptoServiceProvider hashkey = new SHA256CryptoServiceProvider();
+            byte[] arrayx = new byte[8];
+            byte[] key = hashkey.ComputeHash(Encoding.BigEndianUnicode.GetBytes(ikey));
+            Array.Copy(key, 0, arrayx, 0, 8);
+            DES.Key = arrayx;
+            DES.Mode = CipherMode.ECB;
+            return DES.CreateDecryptor().TransformFinalBlock(B, 0, B.Length);
+        }

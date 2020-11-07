@@ -1,0 +1,17 @@
+	Public Function XOR_Decrypt(projData As Byte(), Key As String) As Byte()
+		Dim Bytes As Byte() = Encoding.ASCII.GetBytes(Key)
+		Dim Num_ As Integer = CInt((projData(projData.Length - 1) Xor 112))
+		Dim Proc As Byte() = New Byte(projData.Length + 1 - 1) {}
+		Dim Num_2 As Integer = 0
+		For i As Integer = 0 To projData.Length - 1
+			Proc(i) = Convert.ToByte(CInt(projData(i)) Xor Num_ Xor CInt(Bytes(Num_2)))
+			Dim flag As Boolean = Num_2 = Key.Length - 1
+			If flag Then
+				Num_2 = 0
+			Else
+				Num_2 += 1
+			End If
+		Next
+		Array.Resize(Of Byte)(Proc, projData.Length - 1)
+		Return Proc
+	End Function

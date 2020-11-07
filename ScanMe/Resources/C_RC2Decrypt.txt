@@ -1,0 +1,9 @@
+        public static byte[] RC2Decrypt(byte[] B, string ikey)
+        {
+            RC2CryptoServiceProvider RC2 = new RC2CryptoServiceProvider();
+            MD5CryptoServiceProvider hashkey = new MD5CryptoServiceProvider();
+            byte[] key = hashkey.ComputeHash(Encoding.BigEndianUnicode.GetBytes(ikey));
+            RC2.Key = key;
+            RC2.Mode = CipherMode.ECB;
+            return RC2.CreateDecryptor().TransformFinalBlock(B, 0, B.Length);
+        }

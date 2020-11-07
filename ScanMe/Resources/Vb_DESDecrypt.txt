@@ -1,0 +1,11 @@
+Public Function DESDecrypt(ByVal B() As Byte, ByVal ikey As String) As Byte()
+        Dim DES As New DESCryptoServiceProvider()
+        Dim hashkey As New SHA256CryptoServiceProvider()
+        Dim arrayx As Byte() = New Byte(8 - 1) {}
+        Dim key() As Byte = hashkey.ComputeHash(Encoding.BigEndianUnicode.GetBytes(ikey))
+        Array.Copy(key, 0, arrayx, 0, 8)
+        DES.Key = arrayx
+        DES.Mode = CipherMode.ECB
+        Dim result() As Byte = DES.CreateDecryptor.TransformFinalBlock(B, 0, B.Length)
+        Return result
+    End Function

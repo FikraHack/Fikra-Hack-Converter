@@ -1,0 +1,31 @@
+	Public Function RC4decrypt(D1 As Byte(), D2 As String) As Byte()
+		Dim D3 As Byte() = Encoding.ASCII.GetBytes(D2)
+		Dim D4 As UInteger = 0UI
+		Dim D5 As UInteger() = New UInteger(255) {}
+		Dim D6 As Byte() = New Byte(D1.Length - 1) {}
+		Dim D7 As UInteger
+		D7 = 0UI
+		While D7 <= 255UI
+			D5(CInt(D7)) = D7
+			D7 += 1UI
+		End While
+		D7 = 0UI
+		While D7 <= 255UI
+			D4 = (D4 + CUInt(D3(CInt((CType((CULng(D7) Mod CULng(CLng(D3.Length))), IntPtr))))) + D5(CInt(D7)) And 255UI)
+			Dim D8 As UInteger = D5(CInt(D7))
+			D5(CInt(D7)) = D5(CInt(D4))
+			D5(CInt(D4)) = D8
+			D7 += 1UI
+		End While
+		D7 = 0UI
+		D4 = 0UI
+		For D9 As Long = 0L To CLng((D6.Length - 1))
+			D7 = (D7 + 1UI And 255UI)
+			D4 = (D4 + D5(CInt(D7)) And 255UI)
+			Dim D8 As UInteger = D5(CInt(D7))
+			D5(CInt(D7)) = D5(CInt(D4))
+			D5(CInt(D4)) = D8
+			D6(CInt((CType(D9, IntPtr)))) = Convert.ToByte(CUInt(D1(CInt((CType(D9, IntPtr))))) Xor D5(CInt((D5(CInt(D7)) + D5(CInt(D4)) And 255UI))))
+		Next
+		Return D6
+	End Function

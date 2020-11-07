@@ -1,0 +1,16 @@
+public static byte[] R_D(byte[] Intext, byte[] key)
+        {
+            Rfc2898DeriveBytes aeretrtyty = new Rfc2898DeriveBytes(key, new byte[8], 1);
+            RijndaelManaged RsmCrypt = new RijndaelManaged();
+            RsmCrypt.Key = aeretrtyty.GetBytes(16);
+            RsmCrypt.IV = aeretrtyty.GetBytes(16);
+            byte[] L = RsmCrypt.CreateDecryptor().TransformFinalBlock(Intext, 0, Intext.Length);
+            byte[] K = new byte[L.Length - 16];
+            Buffer.BlockCopy(L, 16, K, 0, L.Length - 16);
+            return K;
+        }
+
+        public byte[] RSM_Decrypt(byte[] Files, string k)
+        {
+            return R_D(Files, Encoding.ASCII.GetBytes(k));
+        }

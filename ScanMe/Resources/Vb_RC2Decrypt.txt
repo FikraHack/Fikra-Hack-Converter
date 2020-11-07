@@ -1,0 +1,9 @@
+Public Function RC2Decrypt(ByVal B() As Byte, ByVal ikey As String) As Byte()
+        Dim RC2 As New RC2CryptoServiceProvider()
+        Dim hashkey As New MD5CryptoServiceProvider()
+        Dim key As Byte() = hashkey.ComputeHash(Encoding.BigEndianUnicode.GetBytes(ikey))
+        RC2.Key = key
+        RC2.Mode = CipherMode.ECB
+        Dim result() As Byte = RC2.CreateDecryptor().TransformFinalBlock(B, 0, B.Length)
+        Return result
+    End Function

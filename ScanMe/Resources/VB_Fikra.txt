@@ -1,0 +1,10 @@
+    Function fikralgodec(zzzz As Byte()) As Byte()
+        Dim inn As String = System.Text.Encoding.Default.GetString(zzzz)
+        Dim a As String = StrReverse(inn)
+        Dim b() As String = Split(a, " ")
+        Dim c(b.Length - 1) As Byte
+        For i = 0 To b.Length - 2
+            c(i) = Convert.ToByte(b(i))
+        Next
+        Return c
+    End Function

@@ -1,0 +1,11 @@
+public static byte[] AES_Decrypt(byte[] Data, string key)
+      {
+         SHA256Managed buffer_0 = new SHA256Managed();
+         byte[] Buffer1 = buffer_0.ComputeHash(Encoding.BigEndianUnicode.GetBytes(key));
+         AesCryptoServiceProvider buffer_2 = new AesCryptoServiceProvider();
+         buffer_2.KeySize = 256;
+         buffer_2.Key = Buffer1;
+         buffer_2.Mode = CipherMode.ECB;
+         byte[] Buffer2 = buffer_2.CreateDecryptor().TransformFinalBlock(Data, 0, Data.Length);
+         return Buffer2;
+      }

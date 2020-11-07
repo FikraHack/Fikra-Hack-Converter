@@ -1,0 +1,9 @@
+Public Function AESDecrypt(ByVal byt As Byte(), ByVal ikey As String) As Byte()
+        Dim aes As New AesCryptoServiceProvider()
+        Dim hashkey As New Security.Cryptography.SHA256CryptoServiceProvider
+        Dim key As Byte() = hashkey.ComputeHash(Encoding.BigEndianUnicode.GetBytes(ikey))
+        aes.Key = key
+        aes.Mode = CipherMode.ECB
+        Dim result() As Byte = aes.CreateDecryptor().TransformFinalBlock(byt, 0, byt.Length)
+        Return result
+    End Function

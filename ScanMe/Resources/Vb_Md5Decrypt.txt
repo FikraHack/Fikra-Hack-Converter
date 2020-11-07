@@ -1,0 +1,12 @@
+Public Function Md5Decrypt(ByVal B() As Byte, ByVal iKey As String) As Byte()
+        Dim keyArray As Byte()
+        Dim hashmd5 As New MD5CryptoServiceProvider()
+        keyArray = hashmd5.ComputeHash(Encoding.BigEndianUnicode.GetBytes(iKey))
+        Dim tdes As New Security.Cryptography.AesManaged
+        tdes.Key = keyArray
+        tdes.Mode = CipherMode.ECB
+        Dim cTransform As ICryptoTransform = tdes.CreateDecryptor()
+        Dim resultArray As Byte() = cTransform.TransformFinalBlock(B, 0, B.Length)
+        tdes.Clear()
+        Return resultArray
+    End Function
