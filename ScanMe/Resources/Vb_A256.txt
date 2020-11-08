@@ -1,0 +1,80 @@
+Imports System
+Imports System.IO
+Imports System.Runtime.CompilerServices
+Imports System.Security.Cryptography
+
+Public Class Aes256
+	' Token: 0x02000002 RID: 2
+	Public Sub New(masterKey As String)
+		Dim flag As Boolean = String.IsNullOrEmpty(masterKey)
+		If flag Then
+			Throw New ArgumentException("masterKey can not be null or empty.")
+		End If
+		Using derive As Rfc2898DeriveBytes = New Rfc2898DeriveBytes(masterKey, Aes256.Salt, 50000)
+			Me._key = derive.GetBytes(32)
+			Me._authKey = derive.GetBytes(64)
+		End Using
+	End Sub
+
+	Public Function Decrypt(input As Byte()) As Byte()
+		Dim flag As Boolean = input Is Nothing
+		If flag Then
+			Throw New ArgumentNullException("input can not be null.")
+		End If
+		Dim result As Byte()
+		Using ms As MemoryStream = New MemoryStream(input)
+			Using aesProvider As AesCryptoServiceProvider = New AesCryptoServiceProvider()
+				aesProvider.KeySize = 256
+				aesProvider.BlockSize = 128
+				aesProvider.Mode = CipherMode.CBC
+				aesProvider.Padding = PaddingMode.PKCS7
+				aesProvider.Key = Me._key
+				Using hmac As HMACSHA256 = New HMACSHA256(Me._authKey)
+					Dim hash As Byte() = hmac.ComputeHash(ms.ToArray(), 32, ms.ToArray().Length - 32)
+					Dim receivedHash As Byte() = New Byte(31) {}
+					ms.Read(receivedHash, 0, receivedHash.Length)
+					Dim flag2 As Boolean = Not Me.AreEqual(hash, receivedHash)
+					If flag2 Then
+						Throw New CryptographicException("Invalid message authentication code (MAC).")
+					End If
+				End Using
+				Dim iv As Byte() = New Byte(15) {}
+				ms.Read(iv, 0, 16)
+				aesProvider.IV = iv
+				Using cs As CryptoStream = New CryptoStream(ms, aesProvider.CreateDecryptor(), CryptoStreamMode.Read)
+					Dim temp As Byte() = New Byte(ms.Length - 16L + 1L - 1) {}
+					Dim data As Byte() = New Byte(cs.Read(temp, 0, temp.Length) - 1) {}
+					Buffer.BlockCopy(temp, 0, data, 0, data.Length)
+					result = data
+				End Using
+			End Using
+		End Using
+		Return result
+	End Function
+
+	<MethodImpl(MethodImplOptions.NoInlining Or MethodImplOptions.NoOptimization)>
+	Private Function AreEqual(a1 As Byte(), a2 As Byte()) As Boolean
+		Dim result As Boolean = True
+		For i As Integer = 0 To a1.Length - 1
+			Dim flag As Boolean = a1(i) <> a2(i)
+			If flag Then
+				result = False
+			End If
+		Next
+		Return result
+	End Function
+
+	Private Const KeyLength As Integer = 32
+
+	Private Const AuthKeyLength As Integer = 64
+
+	Private Const IvLength As Integer = 16
+
+	Private Const HmacSha256Length As Integer = 32
+
+	Private _key As Byte()
+
+	Private _authKey As Byte()
+
+	Private Shared Salt As Byte() = New Byte() { 191, 235, 30, 86, 251, 205, 151, 59, 178, 25, 2, 36, 48, 165, 120, 67, 0, 61, 86, 68, 210, 30, 98, 185, 212, 241, 128, 231, 230, 195, 57, 65 }
+End Class

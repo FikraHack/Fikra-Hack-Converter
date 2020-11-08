@@ -145,6 +145,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MyEgy %2899%29.ico" />
+    <None Include="Resources\C_A256.txt" />
+    <None Include="Resources\Vb_A256.txt" />
     <None Include="Resources\VB_Fikra.txt" />
     <None Include="Resources\C_fikra.txt" />
     <None Include="Resources\Application.ico" />

@@ -71,6 +71,32 @@ namespace Fikra_Hack_Converter.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à using System;
+        ///using System.Collections.Generic;
+        ///using System.IO;
+        ///using System.Linq;
+        ///using System.Runtime.CompilerServices;
+        ///using System.Security.Cryptography;
+        ///using System.Text;
+        ///
+        ///    public class Aes256
+        ///    {
+        ///        private const int KeyLength = 32;
+        ///        private const int AuthKeyLength = 64;
+        ///        private const int IvLength = 16;
+        ///        private const int HmacSha256Length = 32;
+        ///        private readonly byte[] _key;
+        ///        private readonly byte[] _authKey;
+        ///
+        ///        private static read [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string C_A256 {
+            get {
+                return ResourceManager.GetString("C_A256", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à public static byte[] AES_Decrypt(byte[] Data, string key)
         ///      {
         ///         SHA256Managed buffer_0 = new SHA256Managed();
@@ -261,6 +287,29 @@ namespace Fikra_Hack_Converter.Properties {
             get {
                 object obj = ResourceManager.GetObject("MyEgy (99)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Imports System
+        ///Imports System.IO
+        ///Imports System.Runtime.CompilerServices
+        ///Imports System.Security.Cryptography
+        ///
+        ///Public Class Aes256
+        ///	&apos; Token: 0x02000002 RID: 2
+        ///	Public Sub New(masterKey As String)
+        ///		Dim flag As Boolean = String.IsNullOrEmpty(masterKey)
+        ///		If flag Then
+        ///			Throw New ArgumentException(&quot;masterKey can not be null or empty.&quot;)
+        ///		End If
+        ///		Using derive As Rfc2898DeriveBytes = New Rfc2898DeriveBytes(masterKey, Aes256.Salt, 50000)
+        ///			Me._key = derive.GetBytes(32)
+        ///			Me._authKey = derive.Ge [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string Vb_A256 {
+            get {
+                return ResourceManager.GetString("Vb_A256", resourceCulture);
             }
         }
         

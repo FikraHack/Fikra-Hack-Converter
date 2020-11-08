@@ -85,6 +85,7 @@ namespace Fikra_Hack_Converter
                     button8.Enabled = true;
                     button16.Enabled = true;
                     button17.Enabled = true;
+                    button22.Enabled = true;
                 }
                 else
                 {
@@ -95,8 +96,10 @@ namespace Fikra_Hack_Converter
                     button8.Enabled = false;
                     button16.Enabled = false;
                     button17.Enabled = false;
+                    button22.Enabled = false;
                 }
                 button6.Enabled = true;
+                button20.Enabled = true;
             }
             else
             {
@@ -108,6 +111,8 @@ namespace Fikra_Hack_Converter
                 button8.Enabled = false;
                 button16.Enabled = false;
                 button17.Enabled = false;
+                button20.Enabled = false; 
+                button22.Enabled = false;
             }
         }
 
@@ -209,6 +214,25 @@ namespace Fikra_Hack_Converter
             if (textBox1.Text != "")
             {
               System.IO.File.WriteAllBytes(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Fikra", Me.fikralgoEnc(System.IO.File.ReadAllBytes(textBox1.Text)));
+            }
+        }
+
+
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+
+            if (textBox1.Text != "")
+            {
+                if (textBox2.Text != "")
+                {
+                    Aes256 AAA = new Aes256(textBox2.Text);
+                    System.IO.File.WriteAllBytes(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Fikra", AAA.Encrypt(System.IO.File.ReadAllBytes(textBox1.Text)));
+                }
+                else
+                {
+                    MessageBox.Show("Please Add Key !");
+                }
             }
         }
 
@@ -332,6 +356,19 @@ namespace Fikra_Hack_Converter
                 richTextBox1.Text = Properties.Resources.C_fikra;
             }
         }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                richTextBox1.Text = Properties.Resources.Vb_A256;
+            }
+            if (comboBox1.SelectedIndex == 1)
+            {
+                richTextBox1.Text = Properties.Resources.C_A256;
+            }
+        }
+
         private void button9_Click(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex == 0)

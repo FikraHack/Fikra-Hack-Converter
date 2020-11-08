@@ -58,6 +58,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +67,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Lime;
-            this.button1.Location = new System.Drawing.Point(699, 2);
+            this.button1.Location = new System.Drawing.Point(769, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(39, 30);
             this.button1.TabIndex = 0;
@@ -77,7 +79,7 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Lime;
-            this.button2.Location = new System.Drawing.Point(386, 48);
+            this.button2.Location = new System.Drawing.Point(457, 48);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(81, 31);
             this.button2.TabIndex = 1;
@@ -92,7 +94,7 @@
             this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(8, 47);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(372, 31);
+            this.textBox1.Size = new System.Drawing.Size(443, 31);
             this.textBox1.TabIndex = 2;
             // 
             // button3
@@ -147,7 +149,7 @@
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.Yellow;
-            this.button6.Location = new System.Drawing.Point(576, 99);
+            this.button6.Location = new System.Drawing.Point(647, 99);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(65, 30);
             this.button6.TabIndex = 8;
@@ -174,7 +176,7 @@
             // 
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.ForeColor = System.Drawing.Color.Red;
-            this.button9.Location = new System.Drawing.Point(647, 427);
+            this.button9.Location = new System.Drawing.Point(723, 461);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(85, 30);
             this.button9.TabIndex = 14;
@@ -186,7 +188,7 @@
             // 
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.ForeColor = System.Drawing.Color.Red;
-            this.button10.Location = new System.Drawing.Point(647, 244);
+            this.button10.Location = new System.Drawing.Point(723, 242);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(85, 30);
             this.button10.TabIndex = 13;
@@ -198,7 +200,7 @@
             // 
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.ForeColor = System.Drawing.Color.Red;
-            this.button11.Location = new System.Drawing.Point(647, 280);
+            this.button11.Location = new System.Drawing.Point(723, 278);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(85, 30);
             this.button11.TabIndex = 12;
@@ -210,7 +212,7 @@
             // 
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.ForeColor = System.Drawing.Color.Red;
-            this.button12.Location = new System.Drawing.Point(647, 208);
+            this.button12.Location = new System.Drawing.Point(723, 206);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(85, 30);
             this.button12.TabIndex = 11;
@@ -222,7 +224,7 @@
             // 
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.ForeColor = System.Drawing.Color.Red;
-            this.button13.Location = new System.Drawing.Point(647, 136);
+            this.button13.Location = new System.Drawing.Point(723, 134);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(85, 30);
             this.button13.TabIndex = 10;
@@ -234,7 +236,7 @@
             // 
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.ForeColor = System.Drawing.Color.Red;
-            this.button14.Location = new System.Drawing.Point(647, 355);
+            this.button14.Location = new System.Drawing.Point(723, 353);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(85, 30);
             this.button14.TabIndex = 9;
@@ -250,7 +252,7 @@
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
             this.richTextBox1.Location = new System.Drawing.Point(8, 134);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(633, 323);
+            this.richTextBox1.Size = new System.Drawing.Size(704, 357);
             this.richTextBox1.TabIndex = 15;
             this.richTextBox1.Text = "";
             // 
@@ -258,7 +260,7 @@
             // 
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.ForeColor = System.Drawing.Color.Lime;
-            this.button15.Location = new System.Drawing.Point(659, 2);
+            this.button15.Location = new System.Drawing.Point(729, 5);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(39, 30);
             this.button15.TabIndex = 16;
@@ -312,7 +314,7 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Sanskrit Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(647, 47);
+            this.textBox2.Location = new System.Drawing.Point(723, 48);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(85, 81);
@@ -344,7 +346,7 @@
             // 
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button18.ForeColor = System.Drawing.Color.Red;
-            this.button18.Location = new System.Drawing.Point(647, 172);
+            this.button18.Location = new System.Drawing.Point(723, 170);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(85, 30);
             this.button18.TabIndex = 22;
@@ -356,7 +358,7 @@
             // 
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button19.ForeColor = System.Drawing.Color.Red;
-            this.button19.Location = new System.Drawing.Point(647, 319);
+            this.button19.Location = new System.Drawing.Point(723, 317);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(85, 30);
             this.button19.TabIndex = 23;
@@ -373,7 +375,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Vb.Net",
             "C #"});
-            this.comboBox1.Location = new System.Drawing.Point(473, 47);
+            this.comboBox1.Location = new System.Drawing.Point(544, 48);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(168, 32);
             this.comboBox1.TabIndex = 24;
@@ -395,7 +397,7 @@
             this.button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button20.ForeColor = System.Drawing.Color.Yellow;
-            this.button20.Location = new System.Drawing.Point(505, 99);
+            this.button20.Location = new System.Drawing.Point(576, 99);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(65, 30);
             this.button20.TabIndex = 26;
@@ -407,7 +409,7 @@
             // 
             this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button21.ForeColor = System.Drawing.Color.Red;
-            this.button21.Location = new System.Drawing.Point(647, 391);
+            this.button21.Location = new System.Drawing.Point(723, 425);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(85, 30);
             this.button21.TabIndex = 27;
@@ -415,13 +417,42 @@
             this.button21.UseVisualStyleBackColor = true;
             this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
+            // button22
+            // 
+            this.button22.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button22.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button22.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button22.ForeColor = System.Drawing.Color.Yellow;
+            this.button22.Location = new System.Drawing.Point(505, 99);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(65, 30);
+            this.button22.TabIndex = 28;
+            this.button22.Text = "A256";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // button23
+            // 
+            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button23.ForeColor = System.Drawing.Color.Red;
+            this.button23.Location = new System.Drawing.Point(723, 389);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(85, 30);
+            this.button23.TabIndex = 29;
+            this.button23.Text = "D_A256";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(738, 465);
+            this.ClientSize = new System.Drawing.Size(815, 495);
             this.ControlBox = false;
+            this.Controls.Add(this.button23);
+            this.Controls.Add(this.button22);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.button20);
             this.Controls.Add(this.pictureBox1);
@@ -494,6 +525,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button23;
     }
 }
 
