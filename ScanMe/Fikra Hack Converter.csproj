@@ -99,6 +99,7 @@
     <None Include="Resources\Vb_AESDecrypt.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\VB_BNRDecrypt.txt" />
     <None Include="Resources\Vb_DESDecrypt.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MyEgy %2899%29.ico" />
+    <None Include="Resources\C_BNRDecrypt.txt" />
     <None Include="Resources\C_A256.txt" />
     <None Include="Resources\Vb_A256.txt" />
     <None Include="Resources\VB_Fikra.txt" />

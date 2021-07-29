@@ -60,6 +60,8 @@
             this.button21 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +69,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Lime;
-            this.button1.Location = new System.Drawing.Point(769, 5);
+            this.button1.Location = new System.Drawing.Point(787, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(39, 30);
             this.button1.TabIndex = 0;
@@ -78,10 +80,11 @@
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Sanskrit Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Lime;
-            this.button2.Location = new System.Drawing.Point(457, 48);
+            this.button2.Location = new System.Drawing.Point(470, 42);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 31);
+            this.button2.Size = new System.Drawing.Size(126, 26);
             this.button2.TabIndex = 1;
             this.button2.Text = "Add File";
             this.button2.UseVisualStyleBackColor = true;
@@ -91,10 +94,11 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.Black;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Sanskrit Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(8, 47);
+            this.textBox1.Location = new System.Drawing.Point(8, 41);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(443, 31);
+            this.textBox1.Size = new System.Drawing.Size(456, 26);
             this.textBox1.TabIndex = 2;
             // 
             // button3
@@ -104,9 +108,9 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.Yellow;
-            this.button3.Location = new System.Drawing.Point(434, 99);
+            this.button3.Location = new System.Drawing.Point(404, 75);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(65, 30);
+            this.button3.Size = new System.Drawing.Size(63, 30);
             this.button3.TabIndex = 3;
             this.button3.Text = "XOR";
             this.button3.UseVisualStyleBackColor = true;
@@ -119,9 +123,9 @@
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.Yellow;
-            this.button4.Location = new System.Drawing.Point(8, 98);
+            this.button4.Location = new System.Drawing.Point(8, 75);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(65, 30);
+            this.button4.Size = new System.Drawing.Size(63, 30);
             this.button4.TabIndex = 4;
             this.button4.Text = "RC2";
             this.button4.UseVisualStyleBackColor = true;
@@ -134,9 +138,9 @@
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.Color.Yellow;
-            this.button5.Location = new System.Drawing.Point(221, 98);
+            this.button5.Location = new System.Drawing.Point(206, 75);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(65, 30);
+            this.button5.Size = new System.Drawing.Size(63, 30);
             this.button5.TabIndex = 5;
             this.button5.Text = "DES";
             this.button5.UseVisualStyleBackColor = true;
@@ -149,9 +153,9 @@
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.Yellow;
-            this.button6.Location = new System.Drawing.Point(647, 99);
+            this.button6.Location = new System.Drawing.Point(669, 75);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(65, 30);
+            this.button6.Size = new System.Drawing.Size(63, 30);
             this.button6.TabIndex = 8;
             this.button6.Text = "ICON";
             this.button6.UseVisualStyleBackColor = true;
@@ -164,9 +168,9 @@
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.ForeColor = System.Drawing.Color.Yellow;
-            this.button8.Location = new System.Drawing.Point(292, 99);
+            this.button8.Location = new System.Drawing.Point(272, 75);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(65, 30);
+            this.button8.Size = new System.Drawing.Size(63, 30);
             this.button8.TabIndex = 6;
             this.button8.Text = "MD5";
             this.button8.UseVisualStyleBackColor = true;
@@ -176,7 +180,7 @@
             // 
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.ForeColor = System.Drawing.Color.Red;
-            this.button9.Location = new System.Drawing.Point(723, 461);
+            this.button9.Location = new System.Drawing.Point(740, 440);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(85, 30);
             this.button9.TabIndex = 14;
@@ -188,7 +192,7 @@
             // 
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.ForeColor = System.Drawing.Color.Red;
-            this.button10.Location = new System.Drawing.Point(723, 242);
+            this.button10.Location = new System.Drawing.Point(740, 210);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(85, 30);
             this.button10.TabIndex = 13;
@@ -200,7 +204,7 @@
             // 
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.ForeColor = System.Drawing.Color.Red;
-            this.button11.Location = new System.Drawing.Point(723, 278);
+            this.button11.Location = new System.Drawing.Point(740, 242);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(85, 30);
             this.button11.TabIndex = 12;
@@ -212,7 +216,7 @@
             // 
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.ForeColor = System.Drawing.Color.Red;
-            this.button12.Location = new System.Drawing.Point(723, 206);
+            this.button12.Location = new System.Drawing.Point(740, 177);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(85, 30);
             this.button12.TabIndex = 11;
@@ -224,7 +228,7 @@
             // 
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.ForeColor = System.Drawing.Color.Red;
-            this.button13.Location = new System.Drawing.Point(723, 134);
+            this.button13.Location = new System.Drawing.Point(740, 111);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(85, 30);
             this.button13.TabIndex = 10;
@@ -236,7 +240,7 @@
             // 
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.ForeColor = System.Drawing.Color.Red;
-            this.button14.Location = new System.Drawing.Point(723, 353);
+            this.button14.Location = new System.Drawing.Point(740, 308);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(85, 30);
             this.button14.TabIndex = 9;
@@ -250,9 +254,9 @@
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox1.Font = new System.Drawing.Font("Sanskrit Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(8, 134);
+            this.richTextBox1.Location = new System.Drawing.Point(8, 111);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(704, 357);
+            this.richTextBox1.Size = new System.Drawing.Size(724, 358);
             this.richTextBox1.TabIndex = 15;
             this.richTextBox1.Text = "";
             // 
@@ -260,7 +264,7 @@
             // 
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.ForeColor = System.Drawing.Color.Lime;
-            this.button15.Location = new System.Drawing.Point(729, 5);
+            this.button15.Location = new System.Drawing.Point(746, 4);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(39, 30);
             this.button15.TabIndex = 16;
@@ -285,9 +289,9 @@
             this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.ForeColor = System.Drawing.Color.Yellow;
-            this.button16.Location = new System.Drawing.Point(79, 99);
+            this.button16.Location = new System.Drawing.Point(74, 75);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(65, 30);
+            this.button16.Size = new System.Drawing.Size(63, 30);
             this.button16.TabIndex = 18;
             this.button16.Text = "RC4";
             this.button16.UseVisualStyleBackColor = true;
@@ -300,9 +304,9 @@
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.ForeColor = System.Drawing.Color.Yellow;
-            this.button7.Location = new System.Drawing.Point(363, 99);
+            this.button7.Location = new System.Drawing.Point(338, 75);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(65, 30);
+            this.button7.Size = new System.Drawing.Size(63, 30);
             this.button7.TabIndex = 19;
             this.button7.Text = "RSM";
             this.button7.UseVisualStyleBackColor = true;
@@ -312,12 +316,12 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.Black;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Sanskrit Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Sanskrit Text", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(723, 48);
+            this.textBox2.Location = new System.Drawing.Point(740, 41);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(85, 81);
+            this.textBox2.Size = new System.Drawing.Size(85, 64);
             this.textBox2.TabIndex = 20;
             this.textBox2.Text = "Click To Get Key";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -334,9 +338,9 @@
             this.button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button17.ForeColor = System.Drawing.Color.Yellow;
-            this.button17.Location = new System.Drawing.Point(150, 99);
+            this.button17.Location = new System.Drawing.Point(140, 75);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(65, 30);
+            this.button17.Size = new System.Drawing.Size(63, 30);
             this.button17.TabIndex = 21;
             this.button17.Text = "AES";
             this.button17.UseVisualStyleBackColor = true;
@@ -346,7 +350,7 @@
             // 
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button18.ForeColor = System.Drawing.Color.Red;
-            this.button18.Location = new System.Drawing.Point(723, 170);
+            this.button18.Location = new System.Drawing.Point(740, 144);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(85, 30);
             this.button18.TabIndex = 22;
@@ -358,7 +362,7 @@
             // 
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button19.ForeColor = System.Drawing.Color.Red;
-            this.button19.Location = new System.Drawing.Point(723, 317);
+            this.button19.Location = new System.Drawing.Point(740, 275);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(85, 30);
             this.button19.TabIndex = 23;
@@ -370,14 +374,15 @@
             // 
             this.comboBox1.BackColor = System.Drawing.Color.Black;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.ForeColor = System.Drawing.Color.Lime;
+            this.comboBox1.Font = new System.Drawing.Font("Sanskrit Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.Red;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Vb.Net",
             "C #"});
-            this.comboBox1.Location = new System.Drawing.Point(544, 48);
+            this.comboBox1.Location = new System.Drawing.Point(602, 42);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(168, 32);
+            this.comboBox1.Size = new System.Drawing.Size(130, 27);
             this.comboBox1.TabIndex = 24;
             // 
             // pictureBox1
@@ -397,9 +402,9 @@
             this.button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button20.ForeColor = System.Drawing.Color.Yellow;
-            this.button20.Location = new System.Drawing.Point(576, 99);
+            this.button20.Location = new System.Drawing.Point(536, 75);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(65, 30);
+            this.button20.Size = new System.Drawing.Size(63, 30);
             this.button20.TabIndex = 26;
             this.button20.Text = "RVS";
             this.button20.UseVisualStyleBackColor = true;
@@ -409,7 +414,7 @@
             // 
             this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button21.ForeColor = System.Drawing.Color.Red;
-            this.button21.Location = new System.Drawing.Point(723, 425);
+            this.button21.Location = new System.Drawing.Point(740, 374);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(85, 30);
             this.button21.TabIndex = 27;
@@ -424,9 +429,9 @@
             this.button22.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button22.ForeColor = System.Drawing.Color.Yellow;
-            this.button22.Location = new System.Drawing.Point(505, 99);
+            this.button22.Location = new System.Drawing.Point(470, 75);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(65, 30);
+            this.button22.Size = new System.Drawing.Size(63, 30);
             this.button22.TabIndex = 28;
             this.button22.Text = "A256";
             this.button22.UseVisualStyleBackColor = true;
@@ -436,7 +441,7 @@
             // 
             this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button23.ForeColor = System.Drawing.Color.Red;
-            this.button23.Location = new System.Drawing.Point(723, 389);
+            this.button23.Location = new System.Drawing.Point(740, 341);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(85, 30);
             this.button23.TabIndex = 29;
@@ -444,13 +449,42 @@
             this.button23.UseVisualStyleBackColor = true;
             this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
+            // button24
+            // 
+            this.button24.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button24.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button24.ForeColor = System.Drawing.Color.Yellow;
+            this.button24.Location = new System.Drawing.Point(602, 75);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(63, 30);
+            this.button24.TabIndex = 30;
+            this.button24.Text = "BNR";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
+            // 
+            // button25
+            // 
+            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button25.ForeColor = System.Drawing.Color.Red;
+            this.button25.Location = new System.Drawing.Point(740, 407);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(85, 30);
+            this.button25.TabIndex = 31;
+            this.button25.Text = "D_BNR";
+            this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(815, 495);
+            this.ClientSize = new System.Drawing.Size(829, 473);
             this.ControlBox = false;
+            this.Controls.Add(this.button25);
+            this.Controls.Add(this.button24);
             this.Controls.Add(this.button23);
             this.Controls.Add(this.button22);
             this.Controls.Add(this.button21);
@@ -527,6 +561,8 @@
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button button25;
     }
 }
 

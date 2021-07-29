@@ -187,4 +187,10 @@
   <data name="Vb_A256" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vb_A256.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="C_BNRDecrypt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\C_BNRDecrypt.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="VB_BNRDecrypt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VB_BNRDecrypt.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
 </root>

@@ -99,6 +99,7 @@ namespace Fikra_Hack_Converter
                     button22.Enabled = false;
                 }
                 button6.Enabled = true;
+                button24.Enabled = true;
                 button20.Enabled = true;
             }
             else
@@ -113,6 +114,7 @@ namespace Fikra_Hack_Converter
                 button17.Enabled = false;
                 button20.Enabled = false; 
                 button22.Enabled = false;
+                button24.Enabled = false;
             }
         }
 
@@ -235,6 +237,17 @@ namespace Fikra_Hack_Converter
                 }
             }
         }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                BNR binary = new BNR();
+                richTextBox1.Text= binary.HexToBinary(System.IO.File.ReadAllBytes(textBox1.Text));
+            }
+
+        }
+
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -369,6 +382,9 @@ namespace Fikra_Hack_Converter
             }
         }
 
+
+
+
         private void button9_Click(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex == 0)
@@ -378,6 +394,18 @@ namespace Fikra_Hack_Converter
             if (comboBox1.SelectedIndex == 1)
             {
                 richTextBox1.Text = Properties.Resources.C_icon;
+            }
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                richTextBox1.Text = Properties.Resources.VB_BNRDecrypt;
+            }
+            if (comboBox1.SelectedIndex == 1)
+            {
+                richTextBox1.Text = Properties.Resources.C_BNRDecrypt;
             }
         }
 

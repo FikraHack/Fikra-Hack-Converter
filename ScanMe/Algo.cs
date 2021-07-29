@@ -8,6 +8,36 @@ using System.Text;
 
 namespace Fikra_Hack_Converter
 {
+	class BNR
+	{
+		public string HexToBinary(byte[] server)
+		{
+			string str_data = "";
+
+			for (int i = 0; i < server.Length; i++)
+			{
+				str_data += HexToBin(server[i]) + ".";
+			}
+			return str_data;
+		}
+
+
+		String HexToBin(byte b)
+		{
+			StringBuilder str = new StringBuilder(8);
+			int[] bl = new int[8];
+
+			for (int i = 0; i < bl.Length; i++)
+			{
+				bl[bl.Length - 1 - i] = ((b & (1 << i)) != 0) ? 1 : 0;
+			}
+
+			foreach (int num in bl) str.Append(num);
+
+			return str.ToString();
+		}
+	}
+
 	public class Aes256
 	{
 		private const int KeyLength = 32;

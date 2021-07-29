@@ -1,0 +1,27 @@
+       public static byte[] binary_hex(string input)
+        {
+            string[] data = input.Split('.');
+            byte[] server = new byte[data.Length-1];
+            for (int i = 0; i < server.Length; i++)
+            {
+                server[i] = (byte)Convert.ToInt32(XXXXXXXXXX(data[i]), 16);
+            }
+            return server;
+        }
+
+        static string XXXXXXXXXX(string value)
+        {
+            var res = new char[(int)(value.Length / 4)];
+            int j = res.Length - 1;
+            for (int i = value.Length - 1; i > 0; i -= 4)
+            {
+                int x = ((int)value[i] - 48)
+                        + ((int)value[i - 1] - 48) * 2
+                        + ((int)value[i - 2] - 48) * 4
+                        + ((int)value[i - 3] - 48) * 8;
+
+                res[j--] = x.ToString("X")[0];
+            }
+
+            return new string(res);
+        }
