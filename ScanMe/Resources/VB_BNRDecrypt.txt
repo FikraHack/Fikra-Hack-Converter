@@ -1,0 +1,22 @@
+
+		Public Function binary_hex(input As String) As Byte()
+			Dim data As String() = input.Split(New Char() { "."c })
+			Dim server As Byte() = New Byte(data.Length - 1 - 1) {}
+			For i As Integer = 0 To server.Length - 1
+				server(i) = CByte(Convert.ToInt32(XXXXXXXXXXXXXXXX(data(i)), 16))
+			Next
+			Return server
+		End Function
+
+		Private Function XXXXXXXXXXXXXXXX(value As String) As String
+			Dim res As Char() = New Char(value.Length / 4 - 1) {}
+			Dim i As Integer = res.Length - 1
+			For j As Integer = value.Length - 1 To 0 + 1 Step -4
+				Dim x As Integer = CInt((value(j) - "0"c + (value(j - 1) - "0"c) * ""c + (value(j - 2) - "0"c) * ""c + (value(j - 3) - "0"c) * vbBack))
+				Dim array As Char() = res
+				Dim num As Integer = i
+				i = num - 1
+				array(num) = x.ToString("X")(0)
+			Next
+			Return New String(res)
+		End Function

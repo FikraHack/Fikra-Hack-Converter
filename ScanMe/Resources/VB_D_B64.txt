@@ -1,0 +1,3 @@
+        Public Function D_B64(ByVal iKey As String) As Byte()
+            return Convert.FromBase64String(a)
+        End Function

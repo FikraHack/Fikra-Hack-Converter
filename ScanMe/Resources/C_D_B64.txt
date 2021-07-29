@@ -1,0 +1,4 @@
+        public static byte[] D_B64(string a)
+        {
+            return Convert.FromBase64String(a);
+        }
