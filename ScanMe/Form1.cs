@@ -628,5 +628,11 @@ namespace Fikra_Hack_Converter
         {
             textBox1.Clear();
         }
+
+        private void button29_Click_1(object sender, EventArgs e)
+        {
+            AboutBox1 a = new AboutBox1();
+            a.Show();
+        }
     }
 }
